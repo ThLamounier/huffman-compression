@@ -97,13 +97,53 @@ python3 src/huffman_compression.py
 Saída esperada no terminal (resumida):
 
 ```
---- TEXTO 1 ---
-Original: O computador executa instruções ...
-...
-[Texto Comprimido]:
-1100...
-----------------------------------------
+-- TEXTO 1 ---
+Original: O computador executa instruções em alta velocidade e processa dados com precisão.
 
+[Frequência das Palavras]
+  O: 1
+  computador: 1
+  executa: 1
+  instruções: 1
+  em: 1
+  alta: 1
+  velocidade: 1
+  e: 1
+  processa: 1
+  dados: 1
+  com: 1
+  precisão.: 1
+
+[Tabela de Códigos]:
+  alta: 011
+  com: 010
+  dados: 000
+  processa: 001
+  O: 1100
+  computador: 1010
+  e: 1000
+  em: 1011
+  executa: 1101
+  instruções: 1001
+  precisão.: 1111
+  velocidade: 1110
+
+[Estrutura Visual da Árvore de Huffman]:
+(Raiz no Topo | 0 = Esquerda | 1 = Direita)
+
+                                            [12]                                                                    
+                   /-----------------------------------------------------\                                          
+                 [4]                                                    [8]                                         
+          /----------------\                           /------------------------------------\                       
+        [2]               [2]                        [4]                                   [4]                      
+    /---------\         /------\           /----------------------\              /----------------------\           
+"dados"  "processa"  "com"  "alta"       [2]                     [2]           [2]                     [2]          
+                                      /--------\              /--------\     /------\             /-----------\     
+                                    "e"  "instruções"  "computador"  "em"  "O"  "executa"  "velocidade"  "precisão."
+
+[Texto Comprimido]:
+11001010110110011011011111010000010000101111
+----------------------------------------
 Relatório salvo em /caminho/do/projeto/data/output.dat
 ```
 
