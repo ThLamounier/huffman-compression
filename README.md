@@ -82,7 +82,7 @@ Texto 1 linha 2.
 Outro bloco qualquer.
 ```
 
-Se você deixar o arquivo vazio, os textos padrão sobre computadores e sistemas serão utilizados automaticamente.
+Se você deixar o arquivo vazio, os textos padrão serão utilizados automaticamente.
 
 ---
 
