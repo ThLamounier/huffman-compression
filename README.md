@@ -1,8 +1,26 @@
-# Huffman Compression Report
+<h1 align="center">
+  <br>
+  🗜️ Huffman Algorithm
+  <br>
+</h1>
 
-Ferramenta em Python que analisa textos em português, calcula sua codificação pelo algoritmo de Huffman e gera um relatório completo (no console e no arquivo `data/output.dat`) contendo frequências de palavras, tabela de códigos, visualização da árvore e texto comprimido.
+<h4 align="center">Data compression implementation based on binary trees and priority queues.</h4>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/language-Python-blue?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/status-Completed-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/course-Algorithms-orange?style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="#-about">About</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-files">Files</a> •
+  <a href="#-how-to-run">How to Run</a> •
+  <a href="#-output-example">Example</a> •
+  <a href="#-technologies">Technologies</a> •
+  <a href="#-author">Author</a> 
+</p>
 
 ## Sumário
 
