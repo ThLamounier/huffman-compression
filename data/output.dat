@@ -1,309 +1,211 @@
 --- TEXTO 1 ---
-Original: O computador executa instruções em alta velocidade e processa dados com precisão.
+Original: A chuva cai, cai, cai forte no telhado da casa.
 
 [Frequência das Palavras]
-  O: 1
-  computador: 1
-  executa: 1
-  instruções: 1
-  em: 1
-  alta: 1
-  velocidade: 1
-  e: 1
-  processa: 1
-  dados: 1
-  com: 1
-  precisão.: 1
-
-[Tabela de Códigos]:
-  alta: 011
-  com: 010
-  dados: 000
-  processa: 001
-  O: 1100
-  computador: 1010
-  e: 1000
-  em: 1011
-  executa: 1101
-  instruções: 1001
-  precisão.: 1111
-  velocidade: 1110
-
-[Estrutura Visual da Árvore de Huffman]:
-(Raiz no Topo | 0 = Esquerda | 1 = Direita)
-
-                                            [12]                                                                    
-                   /-----------------------------------------------------\                                          
-                 [4]                                                    [8]                                         
-          /----------------\                           /------------------------------------\                       
-        [2]               [2]                        [4]                                   [4]                      
-    /---------\         /------\           /----------------------\              /----------------------\           
-"dados"  "processa"  "com"  "alta"       [2]                     [2]           [2]                     [2]          
-                                      /--------\              /--------\     /------\             /-----------\     
-                                    "e"  "instruções"  "computador"  "em"  "O"  "executa"  "velocidade"  "precisão."
-
-[Texto Comprimido]:
-11001010110110011011011111010000010000101111
-----------------------------------------
-
---- TEXTO 2 ---
-Original: A memória armazena informações que são acessadas rapidamente pela CPU.
-
-[Frequência das Palavras]
+  cai,: 2
   A: 1
-  memória: 1
-  armazena: 1
-  informações: 1
-  que: 1
-  são: 1
-  acessadas: 1
-  rapidamente: 1
-  pela: 1
-  CPU.: 1
+  chuva: 1
+  cai: 1
+  forte: 1
+  no: 1
+  telhado: 1
+  da: 1
+  casa.: 1
 
 [Tabela de Códigos]:
   A: 010
-  armazena: 011
-  informações: 001
-  pela: 100
-  que: 000
-  são: 101
-  CPU.: 1101
-  acessadas: 1100
-  memória: 1111
-  rapidamente: 1110
+  cai: 001
+  cai,: 110
+  casa.: 101
+  forte: 000
+  no: 011
+  telhado: 100
+  chuva: 1111
+  da: 1110
 
 [Estrutura Visual da Árvore de Huffman]:
 (Raiz no Topo | 0 = Esquerda | 1 = Direita)
 
-                                      [10]                                                         
-                   /------------------------------------------\                                    
-                 [4]                                         [6]                                   
-         /------------------\                  /-----------------------------\                     
-       [2]                 [2]               [2]                            [4]                    
-   /---------\          /-------\          /-----\                /---------------------\          
-"que"  "informações"  "A"  "armazena"  "pela"  "são"            [2]                    [2]         
-                                                            /---------\           /-----------\    
-                                                      "acessadas"  "CPU."  "rapidamente"  "memória"
+                            [10]                                    
+               /------------------------------\                     
+             [4]                             [6]                    
+        /-----------\                /------------------\           
+      [2]          [2]             [2]                 [4]          
+    /------\      /----\        /--------\         /---------\      
+"forte"  "cai"  "A"  "no"  "telhado"  "casa."  "cai,"       [2]     
+                                                          /-----\   
+                                                       "da"  "chuva"
 
 [Texto Comprimido]:
-0101111011001000101110011101001101
+01011111101100010000111001110101
+----------------------------------------
+
+--- TEXTO 2 ---
+Original: O gato corre rápido, mas o cachorro corre ainda mais rápido.
+
+[Frequência das Palavras]
+  corre: 2
+  O: 1
+  gato: 1
+  rápido,: 1
+  mas: 1
+  o: 1
+  cachorro: 1
+  ainda: 1
+  mais: 1
+  rápido.: 1
+
+[Tabela de Códigos]:
+  ainda: 011
+  cachorro: 000
+  corre: 111
+  mais: 010
+  rápido,: 100
+  rápido.: 001
+  O: 1010
+  gato: 1100
+  mas: 1101
+  o: 1011
+
+[Estrutura Visual da Árvore de Huffman]:
+(Raiz no Topo | 0 = Esquerda | 1 = Direita)
+
+                                        [11]                                       
+                      /---------------------------------------\                    
+                    [4]                                      [7]                   
+            /-----------------\                    /----------------------\        
+          [2]                [2]                 [3]                     [4]       
+      /---------\          /------\          /---------\             /---------\   
+"cachorro"  "rápido."  "mais"  "ainda"  "rápido,"     [2]          [2]      "corre"
+                                                     /---\       /-----\           
+                                                   "O"  "o"  "gato"  "mas"         
+
+[Texto Comprimido]:
+1010110011110011011011000111011010001
 ----------------------------------------
 
 --- TEXTO 3 ---
-Original: Os sistemas operacionais controlam os recursos e coordenam as tarefas do processador.
+Original: Sim, eu posso, porque posso tentar, posso aprender e posso melhorar.
 
 [Frequência das Palavras]
-  Os: 1
-  sistemas: 1
-  operacionais: 1
-  controlam: 1
-  os: 1
-  recursos: 1
+  posso: 3
+  Sim,: 1
+  eu: 1
+  posso,: 1
+  porque: 1
+  tentar,: 1
+  aprender: 1
   e: 1
-  coordenam: 1
-  as: 1
-  tarefas: 1
-  do: 1
-  processador.: 1
+  melhorar.: 1
 
 [Tabela de Códigos]:
-  as: 001
-  do: 010
-  recursos: 011
-  tarefas: 000
-  Os: 1100
-  controlam: 1001
-  coordenam: 1000
-  e: 1110
-  operacionais: 1101
-  os: 1011
-  processador.: 1111
-  sistemas: 1010
+  posso: 10
+  e: 000
+  eu: 010
+  porque: 011
+  tentar,: 001
+  Sim,: 1100
+  aprender: 1110
+  melhorar.: 1111
+  posso,: 1101
 
 [Estrutura Visual da Árvore de Huffman]:
 (Raiz no Topo | 0 = Esquerda | 1 = Direita)
 
-                                              [12]                                                                      
-                  /------------------------------------------------------------\                                        
-                [4]                                                           [8]                                       
-          /-------------\                                   /-------------------------------------\                     
-        [2]            [2]                                [4]                                    [4]                    
-     /-------\      /-------\                   /----------------------\                /-------------------\           
-"tarefas"  "as"  "do"  "recursos"             [2]                     [2]             [2]                  [2]          
-                                         /-----------\             /-------\      /---------\          /---------\      
-                                   "coordenam"  "controlam"  "sistemas"  "os"  "Os"  "operacionais"  "e"  "processador."
+                             [11]                                                 
+               /--------------------------------\                                 
+             [4]                               [7]                                
+      /---------------\             /-----------------------\                     
+    [2]              [2]        "posso"                    [4]                    
+  /------\         /------\                       /-------------------\           
+"e"  "tentar,"  "eu"  "porque"                  [2]                  [2]          
+                                             /-------\           /----------\     
+                                         "Sim,"  "posso,"  "aprender"  "melhorar."
 
 [Texto Comprimido]:
-11001010110110011011011111010000010000101111
+1100010110101110001101110000101111
 ----------------------------------------
 
 --- TEXTO 4 ---
-Original: O dado é um dado bruto. O processador processa o dado e gera informação. A informação é um dado processado. O dado processado é útil.
+Original: Hoje o vento sopra leve, leve, leve, mas o frio continua forte.
 
 [Frequência das Palavras]
-  dado: 5
-  O: 3
-  é: 3
-  um: 2
-  bruto.: 1
-  processador: 1
-  processa: 1
-  o: 1
-  e: 1
-  gera: 1
-  informação.: 1
-  A: 1
-  informação: 1
-  processado.: 1
-  processado: 1
-  útil.: 1
+  leve,: 3
+  o: 2
+  Hoje: 1
+  vento: 1
+  sopra: 1
+  mas: 1
+  frio: 1
+  continua: 1
+  forte.: 1
 
 [Tabela de Códigos]:
-  dado: 01
-  O: 001
-  é: 100
-  informação: 0000
-  o: 0001
-  um: 1011
-  A: 11111
-  bruto.: 11000
-  e: 11100
-  gera: 10100
-  informação.: 10101
-  processa: 11010
-  processado: 11011
-  processado.: 11110
-  processador: 11001
-  útil.: 11101
+  leve,: 01
+  o: 00
+  continua: 100
+  Hoje: 1010
+  forte.: 1111
+  frio: 1110
+  mas: 1100
+  sopra: 1101
+  vento: 1011
 
 [Estrutura Visual da Árvore de Huffman]:
 (Raiz no Topo | 0 = Esquerda | 1 = Direita)
 
-                                                [25]                                                                                                 
-                       /------------------------------------------------------\                                                                      
-                    [10]                                                    [15]                                                                     
-                 /---------\                 /-----------------------------------------------------------------\                                     
-               [5]      "dado"             [7]                                                                [8]                                    
-            /-------\             /-------------------\                                    /----------------------------------------\                
-          [2]      "O"          "é"                  [4]                                 [4]                                       [4]               
-       /-------\                               /--------------\              /-------------------------\                   /------------------\      
-"informação"  "o"                            [2]            "um"           [2]                        [2]                [2]                 [2]     
-                                         /---------\                   /----------\              /-----------\         /-----\            /--------\ 
-                                     "gera"  "informação."        "bruto."  "processador"  "processa"  "processado"  "e"  "útil."  "processado."  "A"
+                      [12]                                                 
+      /-----------------------------------\                                
+    [5]                                  [7]                               
+  /-----\                  /------------------------------\                
+"o"  "leve,"             [3]                             [4]               
+                    /------------\                /----------------\       
+              "continua"        [2]             [2]               [2]      
+                              /------\        /------\         /-------\   
+                          "Hoje"  "vento"  "mas"  "sopra"  "frio"  "forte."
 
 [Texto Comprimido]:
-0010110010110111000001110011101000010111100101001010111111000010010110111110001011101110011101
+1010001011110101010111000011101001111
 ----------------------------------------
 
 --- TEXTO 5 ---
-Original: A memória rápida é cara. A memória lenta é barata. A CPU usa a memória rápida. O disco é memória lenta. A memória rápida ajuda a CPU.
+Original: Eles falaram muito, muito, muito, mas realmente não disseram nada importante.
 
 [Frequência das Palavras]
-  memória: 5
-  A: 4
-  é: 3
-  rápida: 2
-  a: 2
-  cara.: 1
-  lenta: 1
-  barata.: 1
-  CPU: 1
-  usa: 1
-  rápida.: 1
-  O: 1
-  disco: 1
-  lenta.: 1
-  ajuda: 1
-  CPU.: 1
+  muito,: 3
+  Eles: 1
+  falaram: 1
+  mas: 1
+  realmente: 1
+  não: 1
+  disseram: 1
+  nada: 1
+  importante.: 1
 
 [Tabela de Códigos]:
-  memória: 00
-  A: 101
-  é: 010
-  CPU.: 0110
-  a: 1000
-  rápida: 1101
-  CPU: 11001
-  O: 10011
-  ajuda: 11101
-  barata.: 11100
-  cara.: 01110
-  disco: 11000
-  lenta: 01111
-  lenta.: 10010
-  rápida.: 11110
-  usa: 11111
+  muito,: 10
+  disseram: 010
+  importante.: 011
+  mas: 001
+  realmente: 000
+  Eles: 1100
+  falaram: 1111
+  nada: 1110
+  não: 1101
 
 [Estrutura Visual da Árvore de Huffman]:
 (Raiz no Topo | 0 = Esquerda | 1 = Direita)
 
-                                           [27]                                                                                  
-             /---------------------------------------------------------------\                                                   
-          [11]                                                             [16]                                                  
-     /-------------\                                     /---------------------------------------\                               
-"memória"         [6]                                  [8]                                      [8]                              
-             /------------\                       /------------\                  /-----------------------------\                
-           "é"           [3]                    [4]           "A"               [4]                            [4]               
-                    /-----------\           /----------\                   /-----------\               /------------------\      
-                "CPU."         [2]        "a"         [2]                [2]       "rápida"          [2]                 [2]     
-                            /-------\               /-----\            /------\                   /--------\          /-------\  
-                        "cara."  "lenta"       "lenta."  "O"       "disco"  "CPU"            "barata."  "ajuda"  "rápida."  "usa"
+                                        [11]                                             
+                      /---------------------------------------\                          
+                    [4]                                      [7]                         
+           /--------------------\                   /-------------------\                
+         [2]                   [2]             "muito,"                [4]               
+      /--------\          /-----------\                          /--------------\        
+"realmente"  "mas"  "disseram"  "importante."                  [2]             [2]       
+                                                             /-----\        /-------\    
+                                                         "Eles"  "não"  "nada"  "falaram"
 
 [Texto Comprimido]:
-10100110101001110101000111101011100101110011111110000011110100111100001000100101010011011110110000110
-----------------------------------------
-
---- TEXTO 6 ---
-Original: O sistema controla o processo. O processo usa o recurso. O sistema libera o recurso para o processo. O sistema é o controlador do processo.
-
-[Frequência das Palavras]
-  o: 5
-  O: 4
-  sistema: 3
-  processo.: 3
-  controla: 1
-  processo: 1
-  usa: 1
-  recurso.: 1
-  libera: 1
-  recurso: 1
-  para: 1
-  é: 1
-  controlador: 1
-  do: 1
-
-[Tabela de Códigos]:
-  o: 01
-  O: 101
-  processo.: 100
-  sistema: 001
-  libera: 0001
-  para: 0000
-  controla: 11000
-  controlador: 11100
-  do: 11011
-  processo: 11001
-  recurso: 11111
-  recurso.: 11110
-  usa: 11010
-  é: 11101
-
-[Estrutura Visual da Árvore de Huffman]:
-(Raiz no Topo | 0 = Esquerda | 1 = Direita)
-
-                                            [25]                                                                                  
-                        /-------------------------------------------\                                                             
-                     [10]                                         [15]                                                            
-                /-------------\              /----------------------------------------------\                                     
-              [5]            "o"           [7]                                             [8]                                    
-         /------------\                 /-------\                         /-----------------------------------\                   
-       [2]        "sistema"       "processo."  "O"                      [4]                                  [4]                  
-    /-------\                                                   /-----------------\                  /------------------\         
-"para"  "libera"                                              [2]                [2]               [2]                 [2]        
-                                                          /----------\         /-----\          /--------\         /---------\    
-                                                    "controla"  "processo"  "usa"  "do"  "controlador"  "é"  "recurso."  "recurso"
-
-[Texto Comprimido]:
-1010011100001100101110011101001111101010010001011111100000110010100111101011110011011100
+1100111110101000100011010101110011
 ----------------------------------------

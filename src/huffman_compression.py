@@ -1,8 +1,5 @@
 """
-Huffman Coding Project
-======================
-
-Este módulo contém a orquestração do fluxo principal, consumindo funções
+Este trecho contem a organização do fluxo principal, consumindo funções
 definidas no próprio diretório ``src``.
 """
 

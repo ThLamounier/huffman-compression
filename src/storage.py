@@ -4,12 +4,11 @@ from pathlib import Path
 from typing import List
 
 DEFAULT_TEXTS: List[str] = [
-    "O computador executa instruções em alta velocidade e processa dados com precisão.",
-    "A memória armazena informações que são acessadas rapidamente pela CPU.",
-    "Os sistemas operacionais controlam os recursos e coordenam as tarefas do processador.",
-    "O dado é um dado bruto. O processador processa o dado e gera informação. A informação é um dado processado. O dado processado é útil.",
-    "A memória rápida é cara. A memória lenta é barata. A CPU usa a memória rápida. O disco é memória lenta. A memória rápida ajuda a CPU.",
-    "O sistema controla o processo. O processo usa o recurso. O sistema libera o recurso para o processo. O sistema é o controlador do processo.",
+    "O gato pulou sobre a mesa procurando um pedaço de queijo invisível.",
+    "Nuvens roxas dançavam no céu enquanto o vento assobiava feliz.",
+    "Robôs antigos colecionavam sonhos quebrados em uma caixa de metal.",
+    "A biblioteca secreta só aparecia quando alguém esquecia o próprio nome.",
+    "Relógios derretidos marcavam horas que nunca haviam existido.",
 ]
 
 
