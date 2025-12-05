@@ -13,15 +13,15 @@
 </p>
 
 <p align="center">
-  <a href="#-Introdução">Introdução</a> •
-  <a href="#-Requisitos">Requisitos</a> •
-  <a href="#-Estrutura">Estrutura</a> •
-  <a href="#-Fluxo Geral">Fluxo Geral</a> •
-  <a href="#-Entradas">Entradas</a> •
-  <a href="#-Como Executar">Como Executar</a> •
-  <a href="#-Funções">Funções</a> •
-  <a href="#-Tecnologias">Tecnologias</a> • 
-  <a href="#-Autor">Autor</a> •
+  <a href="#-introdução">Introdução</a> •
+  <a href="#-requisitos">Requisitos</a> •
+  <a href="#-estrutura">Estrutura</a> •
+  <a href="#-fluxo-Geral">Fluxo Geral</a> •
+  <a href="#-entradas">Entradas</a> •
+  <a href="#-como-Executar">Como Executar</a> •
+  <a href="#-funções">Funções</a> •
+  <a href="#-tecnologias">Tecnologias</a> • 
+  <a href="#-autor">Autor</a> 
 </p>
 
 ## 📖Introdução
