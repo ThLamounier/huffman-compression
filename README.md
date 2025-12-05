@@ -34,7 +34,7 @@
 ## 📑Requisitos
 
 - **Python** 3.10 ou superior.
-- **Opcional**, mas recomendado: ambiente virtual (copie e cola no terminal): (`python3 -m venv .venv` e `source .venv/bin/activate` no Linux/macOS ou `.venv\Scripts\activate` no Windows PowerShell).
+- **Recomendado**: ambiente virtual (copie e cola no terminal): (`python3 -m venv .venv` e `source .venv/bin/activate` no Linux/macOS ou `.venv\Scripts\activate` no Windows PowerShell).
 - Nenhuma dependência externa além da biblioteca padrão.
 
 ---
