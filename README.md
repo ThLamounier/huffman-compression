@@ -4,7 +4,7 @@
   <br>
 </h1>
 
-<h4 align="center">Data compression implementation based on binary trees and priority queues.</h4>
+<h4 align="center">Implementação de compressão de dados com base em árvores binárias e filas prioritárias.</h4>
 
 <p align="center">
   <img src="https://img.shields.io/badge/language-Python-blue?style=for-the-badge&logo=python&logoColor=white">
@@ -13,29 +13,25 @@
 </p>
 
 <p align="center">
-  <a href="#-about">About</a> •
-  <a href="#-features">Features</a> •
-  <a href="#-files">Files</a> •
-  <a href="#-how-to-run">How to Run</a> •
-  <a href="#-output-example">Example</a> •
-  <a href="#-technologies">Technologies</a> •
-  <a href="#-author">Author</a> 
+  <a href="#-about">Introdução</a> •
+  <a href="#-Requisits">Requisitos</a> •
+  <a href="#-Structure">Estrutura</a> •
+  <a href="#-Arquivos">Fluxo Geral</a> •
+  <a href="#-Entradas">Entradas</a> •
+  <a href="#-Example">Como Executar</a> •
+  <a href="#-Funções">Funções</a> •
+  <a href="#-Technologies">Tecnologias</a> • 
+  <a href="#-Author">Author</a> •
 </p>
 
-## Sumário
+## 📖Introdução
 
-1. [Requisitos](#requisitos)
-2. [Estrutura do Projeto](#estrutura-do-projeto)
-3. [Fluxo Geral de Execução](#fluxo-geral-de-execução)
-4. [Preparando as Entradas](#preparando-as-entradas)
-5. [Como Executar](#como-executar)
-6. [Arquivos e Funções Principais](#arquivos-e-funções-principais)
-7. [Saída Gerada](#saída-gerada)
-8. [Personalizações](#personalizações)
+- O Algoritmo de Huffman é um método clássico de compressão sem perdas baseado na construção de códigos binários de tamanho variável. A ideia central dete trabalho é atribuir códigos mais curtos aos símbolos(neste trabalho, palavras) mais frequentes e códigos mais longos aos menos frequentes, reduzindo o tamanho total da representação do texto.
 
+- A construção deste programa nao se baseia somente na demonstração dos codigos gerados, mas tambem na visualização da estrutura(Huffman Tree), permitindo melhor avaliação e entendimento.
 ---
 
-## Requisitos
+## 📑Requisitos
 
 - **Python** 3.10 ou superior.
 - Opcional, mas recomendado: ambiente virtual (`python3 -m venv .venv` e `source .venv/bin/activate` no Linux/macOS ou `.venv\Scripts\activate` no Windows PowerShell).
@@ -43,7 +39,7 @@
 
 ---
 
-## Estrutura do Projeto
+## 🗂Estrutura
 
 ```
 .
@@ -61,7 +57,7 @@
 
 ---
 
-## Fluxo Geral de Execução
+## 🔁Fluxo Geral
 
 1. **Leitura** (`storage.parse_input_file`):
    - O script procura `data/input.dat`.
@@ -86,7 +82,7 @@
 
 ---
 
-## Preparando as Entradas
+## 📥Entradas
 
 1. Crie o diretório `data/` na raiz do projeto (se ainda não existir).
 2. Edite `data/input.dat` com os textos desejados. Utilize uma linha em branco (`\n\n`) para separar cada trecho.
@@ -94,25 +90,31 @@
 Exemplo de `input.dat`:
 
 ```
-Texto 1 linha 1.
-Texto 1 linha 2.
+A chuva cai, cai, cai forte no telhado da casa.
 
-Outro bloco qualquer.
+O gato corre rápido, mas o cachorro corre ainda mais rápido.
+
+Sim, eu posso, porque posso tentar, posso aprender e posso melhorar.
+
+Hoje o vento sopra leve, leve, leve, mas o frio continua forte.
+
+Eles falaram muito, muito, muito, mas realmente não disseram nada importante.
+
 ```
 
 Se você deixar o arquivo vazio, os textos padrão serão utilizados automaticamente.
 
 ---
 
-## Como Executar
+## 📝Como Executar
 
 Dentro da raiz do projeto:
 
 ```bash
-python3 src/huffman_compression.py
+python src/huffman_compression.py
 ```
 
-Saída esperada no terminal (resumida):
+Saída esperada no terminal:
 
 ```
 -- TEXTO 1 ---
@@ -165,19 +167,19 @@ Original: O computador executa instruções em alta velocidade e processa dados 
 Relatório salvo em /caminho/do/projeto/data/output.dat
 ```
 
-O arquivo `data/output.dat` conterá o mesmo conteúdo mostrado no console, podendo ser compartilhado ou inspecionado depois.
+O arquivo `data/output.dat` tem o mesmo conteúdo mostrado, podendo ser compartilhado ou visto depois.
 
 ---
 
-## Arquivos e Funções Principais
+## 📋Funções
 
 ### `src/huffman_compression.py`
 - `load_texts(input_path)`: tenta carregar `input.dat`; em caso de ausência, usa `DEFAULT_TEXTS`.
 - `process_blocks(texts)`: aplica `compress_text_block` para cada bloco de texto.
-- `main()`: organiza o fluxo completo (leitura, processamento, geração do relatório e escrita em disco).
+- `main()`: organiza o fluxo completo (leitura, processamento, geração do relatório e escrita).
 
 ### `src/core.py`
-- `Node`: representa um nó da árvore de Huffman (folha com palavra ou nó interno com frequência acumulada).
+- `Node`: representa um nó da árvore de Huffman.
 - `build_huffman_tree(frequency_dict)`: cria a árvore a partir de um dicionário de frequências usando `heapq`.
 - `generate_codes(node)`: percorre a árvore recursivamente e mapeia cada palavra para seu código binário.
 - `build_tree_lines(root)`: gera a representação textual da árvore conforme o layout clássico.
@@ -185,7 +187,7 @@ O arquivo `data/output.dat` conterá o mesmo conteúdo mostrado no console, pode
 
 ### `src/reporting.py`
 - `_format_frequency`, `_format_codes`, `_format_tree`: helpers que formatam cada seção do relatório.
-- `_format_block(index, result)`: produz a estrutura completa de um texto (cabeçalho, frequências, códigos, árvore e binário).
+- `_format_block(index, result)`: produz a estrutura completa de um texto.
 - `generate_report(results)`: concatena todos os blocos com uma linha separadora.
 
 ### `src/storage.py`
@@ -196,42 +198,22 @@ O arquivo `data/output.dat` conterá o mesmo conteúdo mostrado no console, pode
 
 ---
 
-## Saída Gerada
+## 👨‍💻 Autor
 
-Cada bloco tem o seguinte formato:
-
-```
---- TEXTO N ---
-Original: <texto normalizado>
-
-[Frequência das Palavras]
-  palavra: contagem
-  ...
-
-[Tabela de Códigos]:
-  palavra: código
-  ...
-
-[Estrutura Visual da Árvore de Huffman]:
-(Raiz no Topo | 0 = Esquerda | 1 = Direita)
-<desenho ASCII>
-
-[Texto Comprimido]:
-<sequência binária>
-----------------------------------------
-```
-
-Ao final do relatório completo, o script imprime `Relatório salvo em output.dat` indicando o caminho completo do arquivo.
-
----
-
-## Personalizações
-
-- **Textos padrão**: altere a lista `DEFAULT_TEXTS` em `src/storage.py` para definir novos exemplos.
-- **Formatação do relatório**: edite as funções em `src/reporting.py` para incluir novas métricas ou alterar o layout (por exemplo, adicionar estatísticas de compressão ou remover o desenho da árvore).
-- **Divisão de tokens**: atualmente o algoritmo usa `str.split()` (palavras separadas por espaço). Para tratar pontuação de outra forma, adapte a lógica em `core.compress_text_block`.
-- **Integração com outros sistemas**: o módulo `core` devolve objetos `CompressionResult`, permitindo que você use os dados em outras interfaces (GUI, APIs etc.) sem depender do formato textual.
-
----
-
-Com isso, o projeto está pronto para ser executado, adaptado e estudado. Se quiser ampliar o sistema, considere adicionar testes automatizados, exportação do relatório em outros formatos (JSON/HTML) ou uma etapa de decomposição para validar a reversibilidade da compressão. Divirta-se explorando Huffman!
+<div align="center">
+  <a href="https:https://github.com/ThLamounier">
+   <img style="border-radius: 50%;" src="h" width="100px;" alt=""/>
+   <br />
+   <sub><b>ThLamounier</b></sub>
+  </a>
+  <br />
+  <a href="https://github.com/ThLamounier" title="Rocketseat">🚀</a>
+  <p>Feito por <b>Thallys</b>. Entre em contato!</p>
+  
+  <a href="https:www.linkedin.com/in/thallys-lamounier-aa522932b" target="_blank">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank">
+  </a> 
+  <a href="mailto:thallyslamounier6x1@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/-Gmail-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank">
+  </a>
+</div>
