@@ -31,10 +31,13 @@
 - A construção deste programa nao se baseia somente na demonstração dos codigos gerados, mas tambem na visualização da estrutura(Huffman Tree), permitindo melhor avaliação e entendimento.
 ---
 
-## 📑Requisitos
-
+## 📑Requisitos e Instruções
+-No terminal:
+```
+ git clone https://github.com/ThLamounier/huffman-compression.git
+```
 - **Python** 3.10 ou superior.
-- Opcional, mas recomendado: ambiente virtual (`python3 -m venv .venv` e `source .venv/bin/activate` no Linux/macOS ou `.venv\Scripts\activate` no Windows PowerShell).
+- **Opcional**, mas recomendado: ambiente virtual (copie e cola no terminal): (`python3 -m venv .venv` e `source .venv/bin/activate` no Linux/macOS ou `.venv\Scripts\activate` no Windows PowerShell).
 - Nenhuma dependência externa além da biblioteca padrão.
 
 ---
